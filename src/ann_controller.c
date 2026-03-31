@@ -495,7 +495,7 @@ void controllerOutOfTree(control_t* control, const setpoint_t* setpoint, const s
             control->normalizedForces[i] = 0.0f;
             motor_cmd[i] = 0;
         }
-        control->controlMode = controlModePWM;
+        control->controlMode = controlModeForce;
         ctx.prev_set_motors = false;
         ctx.prev_control_link_active = ctx.control_link_active;
         ctx.log_motors_active = 0;
@@ -515,7 +515,7 @@ void controllerOutOfTree(control_t* control, const setpoint_t* setpoint, const s
             for (int i = 0; i < 4; i++) {
                 control->normalizedForces[i] = 0.35f;
             }
-            control->controlMode = controlModePWM;
+            control->controlMode = controlModeForce;
             ctx.hlc_cmd_sent = false; 
             
             ctx.prev_set_motors = set_motors;
@@ -579,7 +579,7 @@ void controllerOutOfTree(control_t* control, const setpoint_t* setpoint, const s
             motor_cmd[i] = (uint16_t)(action_01 * (float)UINT16_MAX);
             control->normalizedForces[i] = action_01;
         }
-        control->controlMode = controlModePWM;
+        control->controlMode = controlModeForce;
     } 
 
     ctx.prev_set_motors = set_motors;
