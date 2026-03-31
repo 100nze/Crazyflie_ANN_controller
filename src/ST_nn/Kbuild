@@ -1,0 +1,3 @@
+obj-y += network.o
+obj-y += network_data.o
+
