@@ -56,10 +56,6 @@ Configure and compile the firmware using the commands suggested by the setup scr
 make cf2_defconfig
 make -j$(nproc)
 ```
-Put the Crazyflie in bootloader mode (turn it off, then hold the power button until the blue LED blinks). Make sure the Crazyradio PA is plugged into your PC, then execute:
-```bash
-cfloader flash build/cf2.bin stm32-fw
-```
 
 ### 4) Create the Python Environment 
 Inside the repository root folder, create and activate the Conda environment to install all required dependencies for the ground station:
@@ -67,7 +63,12 @@ Inside the repository root folder, create and activate the Conda environment to 
 conda env create -n <env_name> -f environment.yml
 conda activate <env_name>
 ```
-You can now run the standard Crazyflie client or our custom scripts:
+With the virtual environment active put the Crazyflie in bootloader mode (turn it off, then hold the power button until the blue LED blinks). Make sure the Crazyradio PA is plugged into your PC, then execute:
+```bash
+cfloader flash build/cf2.bin stm32-fw
+```
+If you have troubles using the Crazyradio refer to [USB permissions troubleshooting](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/usb_permissions/)
+After flashing the firmware you can run the custom client script or the standard Crazyflie client :
 ```bash
 # Run the official Crazyflie client
 cfclient 
