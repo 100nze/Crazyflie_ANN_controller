@@ -67,7 +67,8 @@ With the virtual environment active put the Crazyflie in bootloader mode (turn i
 ```bash
 cfloader flash build/cf2.bin stm32-fw
 ```
-If you have troubles using the Crazyradio refer to [USB permissions troubleshooting](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/usb_permissions/)
+If you have troubles using the Crazyradio refer to [USB permissions troubleshooting](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/usb_permissions/).
+
 After flashing the firmware you can run the custom client script or the standard Crazyflie client :
 ```bash
 # Run the official Crazyflie client
