@@ -122,8 +122,8 @@ python scripts/plotter.py flight_log/<csv_name>
 
 
 - **Inference Time**: The neural network inference takes an average of **~869 µs** per step with a variance of just **9.8 µs²**.
-- **CPU Load**: The stabilize task consumes only **~4.2%** of the CPU. The system idle load remains above **72%**.
-- **Memory Footprint**: The neural network requires **58.1 KB** of Flash memory. In total, the entire custom firmware occupies only **356 KB**
+- **CPU Load**: The stabilize task consumes only **~7%** of the CPU. The system idle load remains above **67%**.
+- **Memory Footprint**: The neural network requires **54 KB** of Flash memory. In total, the entire custom firmware occupies only **356 KB**
 - **RAM Usage**: The ST-AI runtime requires only **840 Bytes** of RAM for the input/output buffers and intermediate activation tensors. The overall firmware RAM usage remains highly safe at **68%**.
 
 ## Credits
